@@ -1,0 +1,20 @@
+name: wax-reduced-motion-dashboard
+trust_label: educational-reference
+version: 0.1.0
+purpose: >
+  Return 1 frame when reduced motion is passed in.
+invariants:
+  - src/motion.ts performs no network or wallet calls.
+  - Requests in src/usecases.ts set executed to false.
+  - No use case contains a transaction.
+do_not:
+  - Do not add a live client and keep this trust label.
+entrypoints:
+  logic: src/motion.ts
+  tests: src/motion.test.ts
+  demo: src/Demo.tsx
+commands:
+  test: npm test
+live_data:
+  status: untested
+  notes: No endpoint was called.
