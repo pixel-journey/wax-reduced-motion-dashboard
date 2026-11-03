@@ -1,17 +1,31 @@
 export const MOTION_MYTHS = [
   {
-    myth: "This page reads prefers-reduced-motion automatically",
+    myth: "This reads prefers-reduced-motion from the browser",
     reality:
-      "The reduced flag is an explicit argument. Host apps wire matchMedia themselves.",
+      "reduced is an argument. Wire matchMedia in the host app; unit-test pure functions here.",
   },
   {
-    myth: "Reduced motion means zero frames",
-    reality:
-      "This helper collapses to 1 frame so state is still visible without a sequence.",
+    myth: "reduced always means zero frames",
+    reality: "motionFrames returns 1 so a static end state can still render.",
   },
   {
-    myth: "Any request count is allowed",
+    myth: "This certifies WCAG conformance for a whole product",
     reality:
-      "Requested frames must be an integer from 1 to 60.",
+      "It only encodes a small policy helper. Accessibility is broader than frame counts.",
+  },
+] as const;
+
+export const GLOSSARY = [
+  {
+    term: "motionFrames",
+    meaning: "1 when reduced, else requested (1–60).",
+  },
+  {
+    term: "motionDurationMs",
+    meaning: "0 when reduced, else requested ms (0–5000).",
+  },
+  {
+    term: "motionPolicy",
+    meaning: "frames + duration + parallax/autoplay flags.",
   },
 ] as const;

@@ -1,5 +1,12 @@
 # Architecture
 
-Return 1 frame when reduced motion is passed in.
+```
+requested frames/ms + reduced flag
+        │
+        ▼
+motionFrames / motionDurationMs
+        │
+        └── motionPolicy → frames, duration, parallax, autoplay
+```
 
-The page calls the same functions as the tests. It does not open a socket and it does not sign.
+Honesty boundary: no matchMedia inside pure helpers; no network.
