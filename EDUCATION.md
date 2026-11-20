@@ -3,7 +3,7 @@
 > **Rung:** `npm test` passes. `reduced` is an argument. The browser is not asked. This is not a medical claim and not a full accessibility audit.  
 > **The test is the rule.**
 
-Pair with `wax-seizure-safe-animations` for the flash-count gate. That lab is a different rule.
+Pair with [wax-seizure-safe-animations](https://github.com/pixel-journey/wax-seizure-safe-animations), which clamps a flash count to 3. This file collapses 12 frames to 1 and a duration to 0. They are not the same rule. Neither one calls the browser. `prefers-reduced-motion` is a host concern. The boolean here is an argument.
 
 ## What you should be able to do
 

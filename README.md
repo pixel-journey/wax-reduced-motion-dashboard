@@ -1,7 +1,7 @@
 # Reduced motion as a pure flag — not a browser call
 
 > **Trust:** `educational-reference`  
-> **Catalog:** [wax-ecosystem-blueprint-catalog](https://github.com/pixel-journey/wax-ecosystem-blueprint-catalog)
+> **Catalog:** `wax-ecosystem-blueprint-catalog` (private index; not this public course)
 
 **One-sentence goal:** Teach that a reduced-motion flag collapses frames to 1, duration to 0, and turns parallax and autoplay off — without asking the browser or claiming a full accessibility audit.
 

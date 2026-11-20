@@ -24,11 +24,13 @@ describe("motionDurationMs", () => {
 
 describe("motionPolicy", () => {
   it("disables parallax/autoplay when reduced", () => {
-    const p = motionPolicy(12, 400, true);
-    expect(p.frames).toBe(1);
-    expect(p.durationMs).toBe(0);
-    expect(p.allowParallax).toBe(false);
-    expect(p.allowAutoplay).toBe(false);
+    const reduced = motionPolicy(12, 400, true);
+    expect(reduced.frames).toBe(1);
+    expect(reduced.durationMs).toBe(0);
+    expect(reduced.allowParallax).toBe(false);
+    expect(reduced.allowAutoplay).toBe(false);
+    const full = motionPolicy(12, 400, false);
+    expect(full).toEqual({ frames: 12, durationMs: 400, allowParallax: true, allowAutoplay: true });
   });
 });
 
